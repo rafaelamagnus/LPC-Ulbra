@@ -1,0 +1,1 @@
+Este repositório é para todas as aulas de Linguagem de programação Comercial.
