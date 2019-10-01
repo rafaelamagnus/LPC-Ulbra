@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Cria uma nova conta";
+}
+<h1>@ViewData["Title"]</h1>
+
+    @model ContaLuz.Models.Home
+
+<div class="form-horizontal">
+    <form action="Create" method="Post">
+
+        <div class="form-group">
+            <label>Id</label>
+            <input  class="form-control"
+                    type="text" name="id"/>
+        </div>
+
+        <div class="form-group">
+            <label>Nome</label>
+            <input  class="form-control"
+                    type="text" name="nome"/>
+        </div>
+
+        <div class="form-group">
+            <label>Numero Leitura</label>
+            <input  class="form-control"
+                    type="text" name="numLeitura"/>
+        </div>
+         <div class="form-group">
+            <label>Kw Gasto
+            </label>
+            <input  class="form-control"
+                    type="text" name="kwGasto"/>
+        </div>
+         <div class="form-group">
+            <label>Valor a Pagar</label>
+            <input  class="form-control"
+                    type="text" name="valorPagar"/>
+        </div>
+         <div class="form-group">
+            <label>Data Pagamaneto</label>
+            <input  class="form-control"
+                    type="text" name="datapagamento"/>
+        </div>
+         <div class="form-group">
+            <label>Media Consumo</label>
+            <input  class="form-control"
+                    type="text" name="mediaConsumo"/>
+        </div>
+
+
+        <input  class="btn btn-primary" 
+                type="submit" value="Salvar"/>
+
+    </form>
+</div>

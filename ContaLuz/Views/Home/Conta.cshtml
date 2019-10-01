@@ -1,0 +1,106 @@
+﻿@{
+    ViewData["Title"] = "Contas";
+    ViewData["Title2"]="Tabela de maior e menor consumo";
+}
+@model ContaLuz.Models.HomeViewModel
+    
+<h2>@ViewData["Title"]</h2> 
+<h3>@ViewData["Message"]</h3>
+<a href="Create" class="btn btn-primary">Nova Conta</a>
+<br><br>
+
+<div class="container">
+    <table border="5">
+    <tr>
+        <td>id</td>
+        <td>Nome</td>
+        <td>Numero Leitura</td>
+        <td>Kw gasto</td>
+        <td>Valor a pagar</td>
+        <td>Data pagamento</td>
+        <td>Média Consumo</td>
+        
+    </tr>
+   
+         @foreach (var item in Model.lista)
+                {
+                    <tr>
+                    <td>@Html.DisplayFor(modelItem => item.id)</td>
+                    <td>@Html.DisplayFor(modelItem => item.nome)</td>
+                    <td>@Html.DisplayFor(modelItem => item.numLeitura)</td>
+                    <td>@Html.DisplayFor(modelItem => item.kwGasto)</td>
+                    <td>@Html.DisplayFor(modelItem => item.valorPagar)</td>
+                    <td>@Html.DisplayFor(modelItem => item.dataPagamento)</td>
+                     <td>@Html.DisplayFor(modelItem => item.mediaConsumo)</td>
+                   <td><a class="btn btn-danger"
+                    href="Delete/@item.id">Delete</a> </td>
+                <td><a class="btn btn-primary" 
+                    href="Edit/@item.id">Editar</a> </td>
+            </tr>
+        }
+        
+        </table>
+
+        @if(Model.lista.Any())
+        {
+            <h3>Tabela de MENOR Consumo</h3>
+        <table border="5">
+            <tr>
+                <td>id</td>
+                <td>Nome</td>
+                <td>Numero Leitura</td>
+                <td>kw Gasto</td>
+                <td>valor Pagar</td>
+                <td>data Pagamento</td>
+                <td>Media Consumo</td>
+            </tr>
+            <tr>
+
+                    <td>@Model.menosConsumo.id</td>
+                    <td>@Model.menosConsumo.nome</td>
+                    <td>@Model.menosConsumo.numLeitura</td>
+                    <td>@Model.menosConsumo.kwGasto</td>
+                    <td>@Model.menosConsumo.valorPagar</td>
+                    <td>@Model.menosConsumo.dataPagamento</td>
+                     <td>@Model.menosConsumo.mediaConsumo</td>
+                     </tr>
+        </table>
+        }
+        
+        <br>
+
+
+
+         @if(Model.lista.Any())
+        {
+            <h3>Tabela de MAIOR Consumo</h3>
+        <table border="5">
+            <tr>
+                <td>id</td>
+                <td>Nome</td>
+                <td>Numero Leitura</td>
+                <td>kw Gasto</td>
+                <td>valor Pagar</td>
+                <td>data Pagamento</td>
+                <td>Media Consumo</td>
+            </tr>
+            <tr>
+
+                    <td>@Model.maiorConsumo.id</td>
+                    <td>@Model.maiorConsumo.nome</td>
+                    <td>@Model.maiorConsumo.numLeitura</td>
+                    <td>@Model.maiorConsumo.kwGasto</td>
+                    <td>@Model.maiorConsumo.valorPagar</td>
+                    <td>@Model.maiorConsumo.dataPagamento</td>
+                     <td>@Model.maiorConsumo.mediaConsumo</td>
+                     </tr>
+        </table>
+        }
+        
+        <br>
+        
+
+        
+</div>
+
+

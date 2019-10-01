@@ -1,0 +1,54 @@
+﻿@model ContaLuz.Models.Home
+
+@{
+    ViewData["Title"] = "Altere os dados em clique em salvar";
+}
+<h1>@ViewData["Title"]</h1>
+
+    <div class="form-horizontal">
+    <form action="Edit" method="Post">
+
+        <div class="form-group">
+            <label>Id</label>
+            <input  class="form-control"
+                    type="text" name="id"
+                    value = "@Model.id"/>
+        </div>
+
+        <div class="form-group">
+            <label>Nome</label>
+            <input  class="form-control"
+                    type="text" name="nome"      value="@Model.nome"/>
+        </div>
+
+        <div class="form-group">
+            <label>numLeitura</label>
+            <input  class="form-control"
+                    type="text" name="numLeitura"
+                    value = "@Model.numLeitura"/>
+        </div>
+         <div class="form-group">
+            <label>kw Gasto</label>
+            <input  class="form-control"
+                    type="text" name="kwgasto"
+                    value = "@Model.kwGasto"/>
+        </div>
+ <div class="form-group">
+            <label>valor pagar</label>
+            <input  class="form-control"
+                    type="text" name="valorPagar"
+                    value = "@Model.valorPagar"/>
+        </div>
+        
+            <div class="form-group">
+            <label>media consumo</label>
+            <input  class="form-control"
+                    type="text" name="mediaConsumo"
+                    value = "@Model.mediaConsumo"/>
+             </div>
+
+        <input  class="btn btn-primary" 
+                type="submit" value="Salvar"/>
+
+    </form>
+</div>
