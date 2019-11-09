@@ -1,0 +1,55 @@
+@model EfContaLuz.Models.Conta
+
+<div class="form-horizontal">
+    <form action="Edit" method="Post">
+
+        <div class="form-group">
+            <label>Id</label>
+            <input  class="form-control"
+                    type="text" name="id"
+                    value = "@Model.id"/>
+        </div>
+
+        <div class="form-group">
+            <label>Nome</label>
+            <input  class="form-control"
+                    type="text" name="nome"      value="@Model.nome"/>
+        </div>
+
+        <div class="form-group">
+            <label>Numero Leitura</label>
+            <input  class="form-control"
+                    type="text" name="numLeitura"
+                    value = "@Model.numLeitura"/>
+        </div>
+        <div class="form-group">
+            <label>kw Gasto</label>
+            <input  class="form-control"
+                    type="text" name="kwGasto"
+                    value = "@Model.kwGasto"/>
+        </div>
+        <div class="form-group">
+            <label>Valor Pagar</label>
+            <input  class="form-control"
+                    type="text" name="valorPagar"
+                    value = "@Model.valorPagar"/>
+        </div>
+        <div class="form-group">
+            <label>Data Pagamento</label>
+            <input  class="form-control"
+                    type="text" name="dataPagamento"
+                    value = "@Model.dataPagamento"/>
+        </div>
+        <div class="form-group">
+            <label>Media Consumo</label>
+            <input  class="form-control"
+                    type="text" name="mediaConsumo"
+                    value = "@Model.mediaConsumo"/>
+        </div>
+
+
+        <input  class="btn btn-primary" 
+                type="submit" value="Salvar"/>
+
+    </form>
+</div>
